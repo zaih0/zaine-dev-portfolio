@@ -30,20 +30,20 @@ const fileTabs: Array<{ key: TabKey; label: string }> = [
 
 const services = [
   {
-    label: "Web Applications",
-    desc: "Full-stack apps built to perform and scale.",
+    label: "Frontend Development",
+    desc: "Building clean interfaces with HTML, JavaScript, Tailwind CSS, Next.js, TypeScript and modern web tools.",
   },
   {
-    label: "Automation",
-    desc: "Cut down repetitive work with smart, custom tooling.",
+    label: "Backend Foundations",
+    desc: "Working with PHP, SQL, Supabase, and practical full-stack development fundamentals.",
   },
   {
-    label: "Dashboards & Data",
-    desc: "Visualise the numbers that actually matter.",
+    label: "Python & Linux",
+    desc: "Comfortable building, learning, and experimenting in Python-based environments.",
   },
   {
-    label: "AI Integration",
-    desc: "Add practical AI features that genuinely help users.",
+    label: "AI Training Experience",
+    desc: "Experienced in reviewing prompts, responses, and language-focused AI work.",
   },
 ];
 
@@ -65,19 +65,53 @@ function AboutPanel() {
             Hi, I&apos;m Zaine.
           </h1>
           <p className="mt-4 text-lg leading-8 text-[var(--vsc-text)]">
-            I&apos;m a full-stack developer who builds clean, fast web apps and
-            tools. My work focuses on making things simple to use, easy to
-            maintain, and enjoyable to work with.
+            I&apos;m a software development student at Vista College who enjoys
+            building practical web projects and improving my skills across the
+            full stack.
           </p>
           <p className="mt-3 text-base leading-7 text-[var(--vsc-muted)]">
-            Whether you need a product built from scratch, an existing app
-            improved, or a process automated — I can help you ship it.
+            I work with technologies like Python, HTML, JavaScript, PHP, Linux,
+            SQL, Next.js, Tailwind CSS, and Supabase, and I&apos;m currently
+            continuing to grow my skills through hands-on projects and real-world
+            experience.
           </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+          <div className="border border-[var(--vsc-border)] bg-[var(--vsc-panel)] p-4">
+            <p className="font-mono text-xs text-[var(--vsc-accent)]">
+              {"// education.json"}
+            </p>
+            <h2 className="mt-2 text-lg font-semibold text-white">
+              Education
+            </h2>
+            <p className="mt-2 text-sm leading-6 text-[var(--vsc-text)]">
+              MBO Software Development at Vista College
+            </p>
+            <p className="text-sm text-[var(--vsc-muted)]">2024 — </p>
+          </div>
+
+          <div className="border border-[var(--vsc-border)] bg-[var(--vsc-panel)] p-4">
+            <p className="font-mono text-xs text-[var(--vsc-accent)]">
+              {"// experience.json"}
+            </p>
+            <h2 className="mt-2 text-lg font-semibold text-white">
+              Experience
+            </h2>
+            <p className="mt-2 text-sm leading-6 text-[var(--vsc-text)]">
+              Outlier AI Trainer
+            </p>
+            <p className="text-sm text-[var(--vsc-muted)]">2024 — 2025</p>
+            <p className="mt-2 text-sm leading-6 text-[var(--vsc-muted)]">
+              Worked on prompt and response evaluation, language quality, and
+              project-based AI training tasks.
+            </p>
+          </div>
         </div>
 
         <div>
           <h2 className="mb-4 text-lg font-semibold text-white">
-            What I can help with
+            Technical strengths
           </h2>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             {services.map((item) => (
@@ -105,8 +139,8 @@ function AboutPanel() {
             Get in touch
           </h2>
           <p className="mt-2 text-base leading-7 text-[var(--vsc-text)]">
-            Open to freelance work, collaborations, and full-time opportunities.
-            Reach out and let&apos;s talk.
+            Open to developer opportunities, internships, collaborations, and
+            project work. Reach out and let&apos;s talk.
           </p>
           <Link
             href="/contact"
