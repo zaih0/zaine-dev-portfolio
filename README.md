@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Zaine Dev Portfolio
 
-## Getting Started
+Code-editor styled portfolio built with Next.js 16, React 19, and Tailwind CSS v4.
 
-First, run the development server:
+## 1) Local setup
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Create your environment file:
+
+```bash
+cp .env.example .env.local
+```
+
+Start dev server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 2) Supabase environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project uses:
 
-## Learn More
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+- `SUPABASE_SERVICE_ROLE_KEY`
 
-To learn more about Next.js, take a look at the following resources:
+Where to get them:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Open your Supabase project dashboard.
+2. Go to **Settings** -> **API**.
+3. Copy:
+	- **Project URL** -> `NEXT_PUBLIC_SUPABASE_URL`
+	- **anon public** key -> `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+	- **service_role secret** key -> `SUPABASE_SERVICE_ROLE_KEY`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Important:
 
-## Deploy on Vercel
+- `SUPABASE_SERVICE_ROLE_KEY` is server-only. Never expose it in client components.
+- Keep `.env.local` private and never commit it.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 3) Docker + Docker Compose
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Build and run with Compose:
+
+```bash
+docker compose up --build
+```
+
+Run in background:
+
+```bash
+docker compose up --build -d
+```
+
+Stop:
+
+```bash
+docker compose down
+```
+
+The app will be available at http://localhost:3000.
+
+## 4) Project structure notes
+
+- `src/app/page.tsx`: editor-style homepage UI
+- `src/app/globals.css`: theme color tokens and global styles
+- `src/lib/supabase.ts`: helper functions for Supabase clients
+- `Dockerfile` + `compose.yaml`: containerized deployment setup
+
+## 5) Next steps
+
+- Add a real projects table in Supabase.
+- Fetch project data in server components.
+- Add admin/editor workflow for quick content updates.

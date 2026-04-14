@@ -1,0 +1,20 @@
+# This file is merged with compose.yaml automatically by Docker Compose.
+# It targets the lightweight dev stage and mounts your source so that
+# Next.js HMR reflects every file change without restarting the container.
+services:
+  web:
+    build:
+      target: dev
+    command: sh -c "npm install && npm run dev"
+    environment:
+      NODE_ENV: development
+      # Poll-based watching so file changes are detected inside Docker volumes
+      WATCHPACK_POLLING: "true"
+    volumes:
+      # Mount the whole project so edits are visible inside the container
+      - .:/app
+      # Keep the container's node_modules; don't let the host override them
+      - /app/node_modules
+      # Keep the container's .next build cache
+      - /app/.next
+    restart: "no"

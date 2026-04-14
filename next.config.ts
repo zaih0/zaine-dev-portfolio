@@ -1,8 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  reactCompiler: true,
+  output: "standalone",
+  compress: true,
+  poweredByHeader: false,
+  experimental: {
+    webpackMemoryOptimizations: true,
+    preloadEntriesOnStart: false,
+  },
 };
 
 export default nextConfig;

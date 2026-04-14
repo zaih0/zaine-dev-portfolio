@@ -1,0 +1,15 @@
+[
+  {
+    "slug": "Exten-project",
+    "title": "kunstkwartiertje",
+    "stack": "next.js, tailwind css, typescript, supabase",
+    "status": "In Progress",
+    "summary": "a website that allows artists to publish artworks and companies to reserve them and put them up at their location",
+    "details": "artists are under accompanists that help them with their art and companies can put their artworks up so people can look at them",
+    "demo_url": null,
+    "repo_url": "https://github.com/zaih0/Exten-Project",
+    "local_only_note": "This project is local for now and not yet hosted",
+    "sort_order": 1,
+    "is_published": true
+  }
+]

@@ -1,8 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #1e1e1e;
+  --foreground: #d4d4d4;
+
+  --vsc-bg: #1e1e1e;
+  --vsc-sidebar: #181818;
+  --vsc-panel: #252526;
+  --vsc-tab: #2d2d2d;
+  --vsc-border: #333333;
+  --vsc-text: #d4d4d4;
+  --vsc-muted: #8b949e;
+  --vsc-accent: #569cd6;
+  --vsc-keyword: #c586c0;
+  --vsc-function: #dcdcaa;
+  --vsc-string: #ce9178;
+  --vsc-property: #9cdcfe;
+  --vsc-variable: #4fc1ff;
+  --vsc-comment: #6a9955;
 }
 
 @theme inline {
@@ -12,15 +27,17 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+.editor-topbar {
+  background: color-mix(in oklab, var(--vsc-bg) 92%, white 8%);
+}
+
+/* Smooth anchor scrolling inside overflow containers */
+* {
+  scroll-behavior: smooth;
 }
