@@ -37,7 +37,7 @@ const demoUrlBySlug: Record<string, string> = {
   "Exten-project": "https://exten-project.vercel.app",
 };
 
-const fallbackProjects: PortfolioProject[] = [
+export const fallbackProjects: PortfolioProject[] = [
   {
     slug: "ai-workflow-engine",
     title: "AI Workflow Engine",

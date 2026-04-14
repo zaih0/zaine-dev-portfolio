@@ -80,3 +80,18 @@ The app will be available at http://localhost:3000.
 - Add a real projects table in Supabase.
 - Fetch project data in server components.
 - Add admin/editor workflow for quick content updates.
+
+## 6) Admin panel for projects
+
+You can manage projects from the built-in admin page:
+
+- URL: `/admin`
+- Features: log in, list projects in a table, create/edit/delete projects, publish/unpublish.
+
+Add these to `.env.local`:
+
+- `ADMIN_USERNAME` (default recommended: `admin`)
+- `ADMIN_PASSWORD` (your login password)
+- `ADMIN_SESSION_SECRET` (long random string used to sign session cookies)
+
+After saving, restart the dev server so env changes are picked up.

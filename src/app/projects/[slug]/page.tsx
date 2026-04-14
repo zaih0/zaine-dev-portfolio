@@ -36,6 +36,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const repoFolderName =
     project.slug === "Exten-project" ? "kunstkwartiertje" : project.title;
   const githubFolderUrl = toGitHubFolderUrl(project.repoUrl, repoFolderName);
+  const isGameProject =
+    /game/i.test(project.title) || /pygame|python game/i.test(project.stack);
 
   return (
     <div className="min-h-screen bg-[var(--vsc-bg)] text-[var(--vsc-text)]">
@@ -71,7 +73,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 rel="noreferrer"
                 className="border border-[var(--vsc-accent)] px-4 py-2 text-sm text-[var(--vsc-accent)] hover:bg-[var(--vsc-accent)] hover:text-[var(--vsc-bg)]"
               >
-                Open live demo
+                {isGameProject ? "Play game" : "Open live demo"}
               </a>
             ) : null}
 
