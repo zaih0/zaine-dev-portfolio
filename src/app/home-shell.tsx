@@ -70,7 +70,7 @@ function AboutPanel() {
             full stack.
           </p>
           <p className="mt-3 text-base leading-7 text-[var(--vsc-muted)]">
-            I work with technologies like{" "}
+            I work with{" "}
             <strong className="font-semibold text-[var(--vsc-muted)]">Python</strong>,{" "}
             <strong className="font-semibold text-[var(--vsc-muted)]">HTML</strong>,{" "}
             <strong className="font-semibold text-[var(--vsc-muted)]">JavaScript</strong>,{" "}
