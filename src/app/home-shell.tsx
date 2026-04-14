@@ -58,7 +58,7 @@ function AboutPanel() {
     <section id="about" className="scrollbar-hidden overflow-auto p-6 xl:flex-1 xl:p-10">
       <div className="max-w-xl space-y-8">
         <div>
-          <p className="mb-3 font-mono text-xs text-[var(--vsc-comment)]">
+          <p className="mb-3 font-mono text-xs text-[var(--vsc-accent)]">
             {"// about.md"}
           </p>
           <h1 className="text-4xl font-bold tracking-tight text-white md:text-5xl">
@@ -70,10 +70,19 @@ function AboutPanel() {
             full stack.
           </p>
           <p className="mt-3 text-base leading-7 text-[var(--vsc-muted)]">
-            I work with technologies like Python, HTML, JavaScript, PHP, Linux,
-            SQL, Next.js, Tailwind CSS, and Supabase, and I&apos;m currently
-            continuing to grow my skills through hands-on projects and real-world
-            experience.
+            I work with technologies like{" "}
+            <strong className="font-semibold text-[var(--vsc-muted)]">Python</strong>,{" "}
+            <strong className="font-semibold text-[var(--vsc-muted)]">HTML</strong>,{" "}
+            <strong className="font-semibold text-[var(--vsc-muted)]">JavaScript</strong>,{" "}
+            <strong className="font-semibold text-[var(--vsc-muted)]">PHP</strong>,{" "}
+            <strong className="font-semibold text-[var(--vsc-muted)]">Linux</strong>,{" "}
+            <strong className="font-semibold text-[var(--vsc-muted)]">SQL</strong>,{" "}
+            <strong className="font-semibold text-[var(--vsc-muted)]">Next.js</strong>,{" "}
+            <strong className="font-semibold text-[var(--vsc-muted)]">Tailwind CSS</strong>,
+            and{" "}
+            <strong className="font-semibold text-[var(--vsc-muted)]">Supabase</strong>,
+            and I&apos;m currently continuing to grow my skills through hands-on
+            projects and real-world experience.
           </p>
         </div>
 
