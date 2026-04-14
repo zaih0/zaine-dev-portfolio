@@ -56,7 +56,7 @@ function tabButtonClass(isActive: boolean) {
 function AboutPanel() {
   return (
     <section id="about" className="scrollbar-hidden overflow-auto p-6 xl:flex-1 xl:p-10">
-      <div className="max-w-xl space-y-8">
+      <div className="mx-auto w-full max-w-4xl space-y-8">
         <div>
           <p className="mb-3 font-mono text-xs text-[var(--vsc-accent)]">
             {"// about.md"}
