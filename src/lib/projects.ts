@@ -33,6 +33,10 @@ const localRunConfigBySlug: Record<string, LocalRunConfig> = {
   },
 };
 
+const demoUrlBySlug: Record<string, string> = {
+  "Exten-project": "https://exten-project.vercel.app",
+};
+
 const fallbackProjects: PortfolioProject[] = [
   {
     slug: "ai-workflow-engine",
@@ -87,6 +91,7 @@ function mapProjectRow(row: Record<string, unknown>): PortfolioProject {
   const slug = String(row.slug ?? "");
   const localRun = localRunConfigBySlug[slug] ?? null;
   const repoUrl = row.repo_url ? String(row.repo_url) : null;
+  const demoUrl = demoUrlBySlug[slug] ?? (row.demo_url ? String(row.demo_url) : null);
 
   return {
     slug,
@@ -95,7 +100,7 @@ function mapProjectRow(row: Record<string, unknown>): PortfolioProject {
     status: String(row.status ?? "Planned"),
     summary: String(row.summary ?? ""),
     details: String(row.details ?? row.summary ?? ""),
-    demoUrl: row.demo_url ? String(row.demo_url) : null,
+    demoUrl,
     repoUrl,
     localOnlyNote: row.local_only_note ? String(row.local_only_note) : null,
     sortOrder: Number(row.sort_order ?? 999),
